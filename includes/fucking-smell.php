@@ -285,5 +285,7 @@ function calculate_mega_adjustment($level, $type, $modifier, $is_final) {
 // $bad_processor = new UtilityHedgehog(5);
 // $bad_processor->run_all_the_things(['val1' => 100, 'val2' => 3], 1); // Should be MODE_ALPHA
 // $bad_processor->process_data_and_check_security('A-101', 'COMPLEX', 24);
+// calculate_mega_adjustment(3, 'B', 15, true);
+// 
 
 ?>
