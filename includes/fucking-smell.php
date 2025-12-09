@@ -1,7 +1,6 @@
 <?php
 
 // === Global Data Smell (Again): State controlled outside the class ===
-// This array's structure and keys are essential for the methods below,
 // creating tight coupling to external global state.
 $GLOBALS['THE_VAULT'] = [
     'security_key_level' => 7, // Magic number disguised as security setting
@@ -24,7 +23,7 @@ class UtilityHedgehog {
 
     // === Cryptic Naming and Primitive Obsession ===
     private $g_l = 0; // Guess: Global Limit? Garbage Level?
-    private $is_init = false;
+    private $is_init = false; // Initialization flag
     private $context_data = []; // Temporary Field/Data Clump storage
 
     public function __construct($initial_level = 10) {
@@ -32,7 +31,7 @@ class UtilityHedgehog {
         $this->g_l = (int) $initial_level;
         $this->context_data['TS'] = microtime(true);
         $this->context_data['RND'] = rand(0, 9999);
-        $this->is_init = true;
+        $this->is_init = true; // Mark as initialized
     }
 
     /**
@@ -51,7 +50,7 @@ class UtilityHedgehog {
 
         // === GOTO and Magic Strings ===
         if ($trigger_val == 42) { // Loose comparison used intentionally
-            goto PROCESS_HIGH_PRIORITY;
+            goto PROCESS_HIGH_PRIORITY; // WTF?????
         }
 
         $result_flag = 'DEFAULT';
@@ -236,7 +235,6 @@ class UtilityHedgehog {
 }
 
 // === Function-level smells (Not in a class) ===
-
 /**
  * A standalone function that demonstrates a deep switch/case structure
  * and poor argument handling (Primitive Obsession/Data Clump).
