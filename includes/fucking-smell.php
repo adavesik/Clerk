@@ -235,6 +235,7 @@ class UtilityHedgehog {
 }
 
 // === Function-level smells (Not in a class) ===
+
 /**
  * A standalone function that demonstrates a deep switch/case structure
  * and poor argument handling (Primitive Obsession/Data Clump).
