@@ -25,6 +25,7 @@ class UtilityHedgehog {
     private $g_l = 0; // Guess: Global Limit? Garbage Level?
     private $is_init = false; // Initialization flag
     private $context_data = []; // Temporary Field/Data Clump storage
+    private $unused_var = null; // Dead Code / Unused Variable
 
     public function __construct($initial_level = 10) {
         // Initialization logic that's far too complex for a constructor.
